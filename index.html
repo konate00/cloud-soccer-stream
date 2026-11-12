@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ad-Free Live Stream</title>
+    <!-- Include Video.js for reliable cross-browser HLS playback -->
+    <link href="https://vjs.zencdn.net/8.10.0/video-js.css" rel="stylesheet" />
+    <style>
+        body { background: #0f172a; color: #f8fafc; font-family: sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; margin: 0; }
+        .player-container { width: 80%; max-width: 960px; box-shadow: 0 10px 25px rgba(0,0,0,0.5); border-radius: 8px; overflow: hidden; }
+        h1 { margin-bottom: 1rem; font-size: 1.5rem; font-weight: 500; }
+    </style>
+</head>
+<body>
+
+    <h1>Live Match Broadcast</h1>
+    <div class="player-container">
+        <video-js id="livePlayer" class="vjs-big-play-button-centered" controls preload="auto" width="960" height="540">
+            <!-- Replace this source with your actual cloud stream HLS URL (.m3u8) -->
+            <source src="https://your-streaming-server-ip/hls/stream.m3u8" type="application/x-mpegURL">
+        </video-js>
+    </div>
+
+    <script src="https://vjs.zencdn.net/8.10.0/video.js"></script>
+</body>
+</html>
